@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>限时满减</title>
+    <style type="text/css">
+    html,
+    body,
+    img,
+    div {
+        padding: 0;
+        margin: 0;
+    }
+
+    div,
+    img {
+        width: 100%;
+    }
+
+    div {
+        position: relative;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    .bgimg {
+        width: 100%;
+    }
+
+    .time_btn {
+        position: absolute;
+        top: 14.825rem;
+        width: 7.05rem;
+        left: 50%;
+        margin-left: -3.525rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="bgimg" src="images/time-limit-bg.png" alt="">
+        <a href="javascript:void(0);" title="">
+            <img id='zige01' class="time_btn" src="images/time-limit-btn.png" alt="">
+            <img id='zige02' class="time_btn" src="images/time-limit-btn2.png" alt="">
+        </a>
+    </div>
+</body>
+<script type="text/javascript" src='js/mui.min.js'></script>
+<script type="text/javascript" src='js/vue.js'></script>
+<script type="text/javascript" src='js/common.js'></script>
+<script type="text/javascript">
+var zige01 = document.getElementById('zige01');
+var zige02 = document.getElementById('zige02');
+// 获取是否有参与资格
+checkQualification("TIME_LIMIT_2_50");
+
+
+zige01.addEventListener('click', function() {
+    getActivity("TIME_LIMIT_2_50");
+})
+
+
+zige02.addEventListener('click', function() {
+    getActivity("TIME_LIMIT_2_50");
+})
+</script>
+
+</html>

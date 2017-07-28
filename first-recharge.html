@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>首冲活动</title>
+    <style type="text/css">
+    html,
+    body,
+    img,
+    div {
+        padding: 0;
+        margin: 0;
+    }
+
+    div,
+    img {
+        width: 100%;
+    }
+
+    div {
+        position: relative;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    .bgimg {
+        width: 100%;
+    }
+
+    .recharge20,
+    .recharge50,
+    .recharge200,
+    .recharge500 {
+        position: absolute;
+        width: 2.075rem;
+    }
+
+    .recharge20,
+    .recharge50 {
+        top: 10.925rem;
+    }
+
+    .recharge200,
+    .recharge500 {
+        top: 16.175rem;
+    }
+
+    .recharge20 {
+        left: 1.5rem;
+    }
+
+    .recharge50 {
+        right: 1.5rem;
+    }
+
+    .recharge200 {
+        left: 1.5rem;
+    }
+
+    .recharge500 {
+        right: 1.5rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="bgimg" src="images/first-recharge.png" alt="">
+        <a href="yydb://duobao1001.com/?type=4" title="">
+            <img class="recharge20" src="images/recharge20.png" alt="">
+        </a>
+        <a href="yydb://duobao1001.com/?type=4" title="">
+            <img class="recharge50" src="images/recharge50.png.png" alt="">
+        </a>
+        <a href="yydb://duobao1001.com/?type=4" title="">
+            <img class="recharge200" src="images/recharge200.png" alt="">
+        </a>
+        <a href="yydb://duobao1001.com/?type=4" title="">
+            <img class="recharge500" src="images/recharge500.png" alt="">
+        </a>
+    </div>
+</body>
+<script type="text/javascript">
+(function() {
+    var html = document.getElementsByTagName('html')[0];
+    var width = document.documentElement.clientWidth || document.body.clientWidth;
+    html.style.fontSize = width / 375 * 20 * 2 + 'px';
+})()
+</script>
+
+</html>

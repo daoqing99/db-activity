@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>0元购</title>
+</head>
+<style type="text/css">
+html,
+body,
+img,
+div,
+ul,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: #fccb2f;
+}
+
+.head {
+    position: relative;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.bgimg {
+    width: 100%;
+}
+
+.zige {
+    position: absolute;
+    top: 16.05rem;
+    width: 5.625rem;
+    left: 50%;
+    margin-left: -2.81rem;
+}
+
+.main {
+    width: 95%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+ul.list {
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+}
+
+li {
+    text-align: center;
+    float: left;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    /*padding-top: 0.35rem;*/
+    width: 4.425rem;
+    position: relative;
+}
+
+ul li:nth-child(2n) {
+    border-right: none;
+}
+
+.zero_buy {
+    position: absolute;
+    width: 1.775rem;
+    top: 4.65rem;
+    left: 2.275rem;
+}
+
+
+
+.product {
+    width: 4.0rem;
+}
+
+.present_price {
+    color: #ee3543;
+    font-size: 0.275rem;
+    padding-left: 0.25rem;
+}
+
+.original_price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.25rem;
+    padding-left: 0.25rem;
+}
+
+.foot {
+    margin-top: 0.5rem;
+}
+
+span {
+    float: left;
+}
+
+.product_price {
+    overflow: hidden;
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.product_name {
+    font-size: 0.4rem;
+    line-height: 0.45rem;
+    color: #000;
+}
+</style>
+
+<body id='zeroBuy'>
+    <div class="head">
+        <img class="bgimg" src="images/bg0-1.png">
+        <!-- <a href="javascript:void(0)"> -->
+        <img id="zige01" class="zige" src="images/btn0-1.png">
+        <!-- </a> -->
+        <!-- <a  href="javascript:void(0)"> -->
+        <img id="zige02" class="zige" src="images/btn0-3.png">
+        <!-- </a> -->
+    </div>
+    <div class="main">
+        <ul class="list">
+            <!-- <li>
+                <img class="product" src="images/01.png">
+                <div class="product_name">移动话费充值卡</div>
+                <div class="product_price">
+                    <span class="present_price">¥1</span> <span class="original_price">¥2599</span>
+                    <a href="yydb://duobao1001.com/?type=8">
+                        <img class="zero_buy" src="images/btn0-2.png">
+                    </a>
+                </div>
+            </li>
+            <li>
+             <img class="product" src="images/01.png">
+             <div class="product_name">移动话费充值卡</div>
+             <div class="product_price">
+                 <span class="present_price">¥1</span> <span class="original_price">¥2599</span>
+                 <a href="yydb://duobao1001.com/?type=8">
+                     <img class="zero_buy" src="images/btn0-2.png">
+                 </a>
+             </div>
+         </li>
+         <li>
+             <img class="product" src="images/01.png">
+             <div class="product_name">移动话费充值卡</div>
+             <div class="product_price">
+                 <span class="present_price">¥1</span> <span class="original_price">¥2599</span>
+                 <a href="yydb://duobao1001.com/?type=8">
+                     <img class="zero_buy" src="images/btn0-2.png">
+                 </a>
+             </div>
+         </li>
+         <li>
+             <img class="product" src="images/01.png">
+             <div class="product_name">移动话费充值卡</div>
+             <div class="product_price">
+                 <span class="present_price">¥1</span> <span class="original_price">¥2599</span>
+                 <a href="yydb://duobao1001.com/?type=8">
+                     <img class="zero_buy" src="images/btn0-2.png">
+                 </a>
+             </div>
+         </li>
+         <li>
+             <img class="product" src="images/01.png">
+             <div class="product_name">移动话费充值卡</div>
+             <div class="product_price">
+                 <span class="present_price">¥1</span> <span class="original_price">¥2599</span>
+                 <a href="yydb://duobao1001.com/?type=8">
+                     <img class="zero_buy" src="images/btn0-2.png">
+                 </a>
+             </div>
+         </li> -->
+            <li v-for='item in zeroProductsList' v-bind:id='item.id' v-bind:productStatus='item.productStatus'>
+                <img class="product" :src="item.imgUrl">
+                <div class="product_name">{{item.name}}</div>
+                <div class="product_price">
+                    <span class="present_price">¥{{item.price}}</span> <span class="original_price">¥{{item.value}}</span>
+                    <a class="oneBuy" href="yydb://duobao1001.com/?type=9">
+                     <img class="zero_buy" src="images/btn0-2.png">
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="foot">
+        <img class="bgimg" src="images/bg0-2.png">
+    </div>
+</body>
+<script type="text/javascript" src='js/mui.min.js'></script>
+<script type="text/javascript" src='js/vue.js'></script>
+<script type="text/javascript" src='js/common.js'></script>
+<script type="text/javascript">
+var zige01 = document.getElementById('zige01');
+var zige02 = document.getElementById('zige02');
+
+var pageNo = 1;
+var pageSize = 10;
+
+var getZeroProducts = new Vue({
+    el: '#zeroBuy',
+    data: {
+        zeroProductsList: []
+    }
+});
+
+
+
+// 获取是否有参与资格
+
+checkQualification("ZERO_BUY");
+
+
+
+var oneBuy = document.getElementsByClassName('oneBuy');
+// 获取活动产品
+ajaxPost(PRODUCTIDS, {
+        activityCode: 'ZERO_BUY',
+        pageNo: pageNo,
+        pageSize: pageSize
+    }, function success(data) {
+        if (data.status == "1") {
+            console.log(JSON.stringify(data.data))
+            getZeroProducts.zeroProductsList = data.data;
+            mui.toast(data.msg);
+            getZeroProducts.$nextTick(function() {
+                for (var i = 0; i < oneBuy.length; i++) {
+                    oneBuy[i].href = oneBuy[i].href + '&productid=' + data.data[i].id;
+                }
+
+
+            })
+
+        } else if (data.status == "0") {
+
+            mui.toast(data.status);
+            mui.toast(data.msg);
+        } else {
+            mui.toast(data.msg);
+        }
+    },
+    function error(err) {}
+);
+
+// 领取活动资格
+
+zige01.addEventListener('click', function() {
+    getActivity("ZERO_BUY");
+})
+
+
+zige02.addEventListener('click', function() {
+    getActivity("ZERO_BUY");
+})
+</script>
+
+</html>
